@@ -19,7 +19,7 @@ for subject in listdir(directory):
     tokens = subject.split(delimiter)
     dic[tokens[0]].append(subject)
 
-print "USERID    PRE   POST"
+print "USERID    PRE           POST"
 for userid, filelist in dic.iteritems():
     presizelist = list()
     postsizelist = list()
