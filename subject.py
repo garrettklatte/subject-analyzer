@@ -31,5 +31,14 @@ for userid, filelist in dic.iteritems():
             presizelist.append(path.getsize(filename))
         else:
             postsizelist.append(path.getsize(filename))
+
+    premean = "N/A"
+    postmean = "N/A"
+
+    if presizelist:
+        premean = str(numpy.mean(presizelist))
+
+    if postsizelist:
+        postmean = str(numpy.mean(postsizelist))
             
-    print str(userid).ljust(9), str(numpy.mean(presizelist)).ljust(5), numpy.mean(postsizelist)
+    print str(userid).ljust(9), premean.ljust(5), postmean
